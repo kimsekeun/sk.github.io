@@ -1,0 +1,36 @@
+/* styles.css */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #eef4f7;
+}
+
+.dna-helix-container {
+    width: 100px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+.dna-helix {
+    position: absolute;
+    top: 0;
+    animation: helixAnimation 5s infinite;
+}
+
+.base-pair {
+    width: 100px;
+    height: 30px;
+    background: linear-gradient(90deg, rgba(155, 89, 182, 1) 0%, rgba(52, 152, 219, 1) 50%, rgba(155, 89, 182, 1) 100%);
+    border-radius: 15px;
+    margin-bottom: 10px;
+    transform: skew(20deg);
+}
+
+@keyframes helixAnimation {
+    0% { top: 0; }
+    50% { top: -20px; }
+    100% { top: 0; }
+}
